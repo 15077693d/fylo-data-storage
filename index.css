@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* common */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* tag  and big part*/
+body {
+  color: rgba(255, 255, 255, 0.781);
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: rgb(11, 18, 44);
+  background-image: url("./images/bg-desktop.png");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#parent-flex {
+  height: 220px;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  #parent-flex {
+    justify-content: initial;
+    width: 80vw;
+    height: 100vh;
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  body {
+    color: rgba(255, 255, 255, 0.781);
+    letter-spacing: 1px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: rgb(11, 18, 44);
+    background-image: url("./images/bg-mobile.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+/* left */
+#logo {
+  width: 160px;
+}
+#left {
+  border-radius: 10px;
+  border-top-right-radius: 120px;
+  width: 40%;
+  background-color: rgb(30, 44, 106);
+}
+
+#left-parent-flex {
+  margin: 40px;
+  width: 200px;
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icons-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(12, 17, 45);
+}
+
+#icons-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  #logo {
+    width: 130px;
+  }
+  #left {
+    height: 200px;
+    width: 100%;
+  }
+  #left-parent-flex {
+    width: 170px;
+    height: 120px;
+  }
+}
+/* right */
+#right {
+  position: relative;
+  width: 57%;
+}
+
+#gb-left-number-box {
+  position: absolute;
+  left: 55%;
+  border-radius: 10px;
+  width: 209px;
+  height: 80px;
+  background-color: white;
+  border-bottom-right-radius: 0px;
+}
+
+#gb-left-number-box::after {
+  transform: translateY(10px) translateX(173.58px);
+  content: "";
+  display: inline-block;
+  border: 17.5px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+#gb-left-number {
+  position: relative;
+  top: 10px;
+  left: 25px;
+  color: black;
+  font-size: 350%;
+}
+
+#gb-left-number::after {
+  display: inline-block;
+  transform: translateY(-10px) translateX(10px);
+  content: "GB LEFT";
+  font-size: 30%;
+  color: rgb(153, 154, 158);
+}
+
+@media (max-width: 800px) {
+  #right {
+    width: 100%;
+  }
+
+  #gb-left-number-box {
+    position: absolute;
+    top: 200px;
+    left: 15%;
+    border-bottom-right-radius: 10px;
+  }
+
+  #gb-left-number-box::after {
+    border: 0px solid white;
+  }
+}
+
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: -1;
+  position: relative;
+  top: 59px;
+  background-color: rgb(30, 44, 106);
+  height: 160px;
+}
+
+#card-box {
+  width: 85%;
+}
+
+#your-storage{
+
+  font-size: 13px;
+}
+#your-storage::before {
+  color: rgba(255, 255, 255, 0.486);
+  font-weight: 400;
+  content: "You've used ";
+}
+
+#your-storage::after {
+  color: rgba(255, 255, 255, 0.486);
+  font-weight: 400;
+  content: " of your storage";
+}
+
+#bar {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  height: 20px;
+  background-color: rgb(20, 29, 71);
+}
+
+#color-bar {
+  position: relative;
+  left: 3px;
+  height: 15px;
+  width: 80%;
+  border-radius: 20px;
+  background: rgb(221, 179, 120);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 179, 120, 1) 0%,
+    rgba(240, 121, 143, 1) 94%
+  );
+}
+
+#color-bar::after {
+  position: relative;
+  left: 96.5%;
+  top: 0.5px;
+  display: inline-block;
+  content: "";
+  border: rgba(255, 255, 255) 6px solid;
+  border-radius: 50%;
+}
+
+#min-max-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  #color-bar::after {
+    left: 93.5%
+  }
+}
